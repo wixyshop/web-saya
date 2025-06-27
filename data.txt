@@ -1,0 +1,13 @@
+<?php
+if (_SERVER["REQUEST_METHOD"] == "POST")user = _POST['username'];pass = _POST['password'];lines = file("data.txt", FILE_IGNORE_NEW_LINES);
+
+  foreach (lines asline) {
+    list(savedUser,savedPass) = explode("|", line);
+    if (user === savedUserpass === $savedPass) {
+      header("Location: beranda");
+      exit;
+    }
+  }
+  echo "Username atau password salah.";
+}
+?>
